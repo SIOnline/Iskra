@@ -1,0 +1,2 @@
+# Iskra
+WordPress starter theme
