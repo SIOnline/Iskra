@@ -6,13 +6,12 @@
         if ( function_exists('acf_register_block_type') ) {
             $block_name = get_class($this);
 
-            acf_register_block_type(
-                [
+            acf_register_block_type([
                     'name' => $block_name,
                     'title' => __($block_name),
                     'description' => __('Example description'),
                     'render_template' => "src/Blocks/$block_name/$block_name.php",
-                    'category' => 'common', //header / content 
+                    'category' => 'header', //
                     'icon' => [
                         'background' => '#7e70af',
                         'foreground' => '#fff',
@@ -33,8 +32,7 @@
                     },
                     //'supports'
                     'render_callback' => [$this, 'render']
-                ]
-            );
+            ]);
         }
     }
 

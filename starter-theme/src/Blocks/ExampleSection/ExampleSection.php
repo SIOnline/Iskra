@@ -10,7 +10,7 @@
                     'title' => __('ExampleSection'),
                     'description' => __('ExampleSection description'),
                     'render_template' => 'src/Blocks/ExampleSection/ExampleSection.php',
-                    'category' => 'common', //header / content 
+                    'category' => 'sections', //header / content 
                     'icon' => [
                         'background' => '#7e70af',
                         'foreground' => '#fff',
