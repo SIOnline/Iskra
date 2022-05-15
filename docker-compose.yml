@@ -33,7 +33,7 @@ services:
       - "4000:80"
     volumes:
       - wordpress_data:/var/www/html
-      - "./starter-theme:/var/www/html/wp-content/themes/starter-theme:cached"
+      - "./theme:/var/www/html/wp-content/themes/starter-theme:cached"
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./wp-config.php:/var/www/html/wp-config.php
     environment:
