@@ -28,22 +28,24 @@ services:
   wordpress:
     depends_on:
       - db
-    image: wordpress:5.9.2-apache
+    image: wordpress:5.9.3-apache
     ports:
       - "4000:80"
     volumes:
       - wordpress_data:/var/www/html
-      - "./wp-content:/var/www/html/wp-content:cached"
+      - "./starter-theme:/var/www/html/wp-content/themes/starter-theme:cached"
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./wp-config.php:/var/www/html/wp-config.php
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_TABLE_PREFIX: _wp
       LOCALHOST: 1
       WORDPRESS_DEBUG: 1
       UPLOAD_LIMIT: 300M
       WORDPRESS_CONFIG_EXTRA: |
-        define( 'WP_ENVIRONMENT_TYPE', 'local' );
+        define( 'WP_ENVIRONMENT_TYPE', 'development' );
         define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );
         define( 'WP_DEBUG_DISPLAY', true );
         define( 'SCRIPT_DEBUG', true );

@@ -1,0 +1,15 @@
+.wp-block.editor-post-title__input {
+    text-align: center;
+    padding: 20px;
+    border:1px currentColor solid;
+    margin-bottom: 20px;
+    display: block;
+}
+
+html :where(.wp-block) {
+    max-width: none;
+}
+
+.wp-block {
+    margin: 0;
+}
