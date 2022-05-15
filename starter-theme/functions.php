@@ -18,13 +18,13 @@ add_action( 'after_setup_theme', 'misha_gutenberg_css' );
  */
 function filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
     
-        $category_heading = array(
+        $category_headings = array(
             'slug'  => 'header',
-            'title' => __( 'Header', 'starter-theme' ),
+            'title' => __( 'Headers', 'starter-theme' ),
             'icon'  => null,
         );
 
-        $category_blocks = array(
+        $category_sections = array(
             'slug' => 'sections',
             'title' => __( 'Sections', 'starter-theme' ),
             'icon' => null,
@@ -32,8 +32,8 @@ function filter_block_categories_when_post_provided( $block_categories, $editor_
         
     array_unshift( 
         $block_categories, 
-        $category_heading, 
-        $category_blocks
+        $category_headings, 
+        $category_sections
     );
     return $block_categories;
 }
@@ -41,31 +41,14 @@ function filter_block_categories_when_post_provided( $block_categories, $editor_
 add_filter( 'block_categories_all', 'filter_block_categories_when_post_provided', 1, 2 );
 
 /**
- * 
-*function my_plugin_block_categories( $categories, $post ) {
-*   $custom_category_one = array(
-*     'slug' => 'header',
-*     'title' => __( 'Headers', 'my-plugin' ),
-*     //'icon'  => 'admin-home',
-*   );
-* 
-*   array_unshift( $categories, $custom_category_one, $custom_category_two, $custom_category_three );
-*   return $categories;
-* }
-* add_filter( 'block_categories_all', 'my_plugin_block_categories', 10, 2 );
- */
-
-/**
- * 
+ * Register blocks
  */
 $blocks = [
     'Example',
     'ExampleSection'
 ];
 
-
 foreach ($blocks as $block) {
-    require 'src/Blocks/' . $block . '/' . $block . '.php';
+    require_once "src/Blocks/$block/$block.php";
     new $block(); 
 }
-
