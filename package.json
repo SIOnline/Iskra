@@ -2,9 +2,9 @@
   "name": "iskra",
   "version": "1.0.0",
   "description": "WordPress starter theme",
-  "main": "starter-theme/index.js",
+  "main": "config/webpack.config.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
