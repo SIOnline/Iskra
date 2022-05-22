@@ -1,10 +1,14 @@
 node_modules
 package-lock.json
 build/
-yarn.lock
 dist/
 assets.json
 
 
 /wp-content*
 _*.css
+
+
+# Yarn
+yarn.lock
+yarn-error.log

@@ -1,0 +1,10 @@
+$SCALE_MIN_WIDTH : 360px;
+$SCALE_MAX_WIDTH: 1920px;
+
+$FONT_DEFAULT: 'Roboto', sans-serif;
+
+//bootstrap
+
+@import "styles/colors";
+@import "styles/mixins";
+@import "styles/typography";

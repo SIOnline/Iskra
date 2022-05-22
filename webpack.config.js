@@ -22,7 +22,6 @@ items['Global'] = [
 ];
 
 items['Editor'] = [
-    paths.appCommon + '/editor.js',
     paths.appCommon + '/editor.scss'
 ];
 
@@ -45,7 +44,6 @@ glob.sync('theme/src/Components/**/*.js*').forEach(function (filePath) {
 
 module.exports = {
     entry: items,
-    bail: true,
     stats: 'summary',
     module: {
         rules: [
@@ -67,7 +65,16 @@ module.exports = {
                         loader: 'css-loader'
                     },
                     {
-                        loader: 'sass-loader'
+                        loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            additionalData: '@import "config.scss";',
+                            sassOptions: {
+                                includePaths: [paths.appCommon]
+                            }
+                        }
                     }
                 ]
             },
@@ -131,4 +138,4 @@ module.exports = {
         }),
 
     ],
-}            
+}

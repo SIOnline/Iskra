@@ -1,0 +1,43 @@
+html {
+	&.blocked {
+		body {
+			overflow: hidden;
+			position: relative;
+			height: 100%;
+		}
+	}
+}
+
+body {
+	@include text-16;
+	font-family: $FONT_DEFAULT;
+	color: $color-typography-default;
+
+	&.logged-in {
+		.navbar {
+			top: 32px;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+::selection {
+	background: $color-black;
+	color: $color-white;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $color-black;
+}

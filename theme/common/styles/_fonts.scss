@@ -1,0 +1,10 @@
+/* roboto-regular - latin-ext_latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local(''),
+		url('../assets/fonts/roboto-v20-latin-ext_latin-regular.woff2') format('woff2'),
+		url('../assets/fonts/roboto-v20-latin-ext_latin-regular.woff') format('woff');
+}

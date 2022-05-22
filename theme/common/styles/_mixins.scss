@@ -1,0 +1,14 @@
+@use "sass:math";
+
+@mixin fluid($parameter, $minValue, $maxValue, $min-size: $SCALE_MIN_WIDTH, $max-size: $SCALE_MAX_WIDTH) {
+
+	#{$parameter} : $minValue;
+
+	@media (min-width:$min-size) and (max-width : $max-size) {
+		#{$parameter} : calc(#{$minValue} + #{(math.div($maxValue, $maxValue * 0 + 1) - math.div($minValue, $minValue * 0 + 1))} * ( (100vw - #{$min-size}) / #{(math.div($max-size, $max-size * 0 + 1) - math.div($min-size, $min-size * 0 + 1))}));
+	}
+
+	@media (min-width:$max-size) {
+		#{$parameter} : $maxValue;
+	}
+}

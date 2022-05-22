@@ -1,0 +1,6 @@
+@mixin text-16 {
+	@include fluid(font-size, 10px, 16px);
+}
+@mixin text-24 {
+	@include fluid(font-size, 10px, 16px);
+}
