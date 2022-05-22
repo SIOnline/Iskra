@@ -2,7 +2,8 @@ node_modules
 package-lock.json
 build/
 yarn.lock
-
+dist/
+assets.json
 
 
 /wp-content*
