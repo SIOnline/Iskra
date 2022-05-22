@@ -132,7 +132,7 @@ module.exports = {
 
         new FriendlyErrorsPlugin({
             compilationSuccessInfo: {
-                messages: ['Use: \n    [yarn start] to develop, \n    [yarn block] to create a new block \n    [yarn dist] to generate production optimised files\n'],
+                messages: ['\nCommands: \n    [yarn start] - develop, \n    [yarn block] - create a new block \n    [yarn dist] - generate production optimised files\n'],
             },
             clearConsole: true
         }),

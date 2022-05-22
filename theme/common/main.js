@@ -1,1 +1,2 @@
-console.log('main.js');
+console.log('maisn.js');
+alert('test');

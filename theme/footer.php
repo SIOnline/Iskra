@@ -1,1 +1,11 @@
-<?php wp_footer(); ?>
+<?php
+
+  $footer = new Footer();
+  $footer->render();
+
+  wp_footer();
+
+?>
+
+</body>
+</html>

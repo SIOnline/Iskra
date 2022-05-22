@@ -24,8 +24,8 @@ WordPress starter theme
 ## Environments
 | Env & ports                         | Description                 |
 | ----------------------------------- | --------------------------- |
-| <http://localhost:8000>             | Local default               |
-| <http://localhost:8001>             | Local, watching for changes |
-| <http://localhost:8002>             | PhpMyAdmin                  |
+| <http://localhost:4000>             | Local default               |
+| <http://localhost:4001>             | Local, watching for changes |
+| <http://localhost:4002>             | PhpMyAdmin                  |
 | <>                                  | Staging                     |
 | <>                                  | Production                  |

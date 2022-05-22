@@ -1,15 +1,19 @@
-<?php 
+<?php
 
  class Example {
-     
+
     public function __construct() {
         if ( function_exists('acf_register_block_type') ) {
             $block_name = get_class($this);
 
+			//Components([
+			//	'Button'
+			//]);
+
             acf_register_block_type([
                     'name' => $block_name,
                     'title' => __($block_name),
-                    'description' => __('Example description'),
+                    'description' => __(''),
                     'render_template' => "src/Blocks/$block_name/$block_name.php",
                     'category' => 'header', //
                     'icon' => [
@@ -22,20 +26,17 @@
                     'mode' => 'preview', //preview / edit / auto
                     'enqueue_assets' => function(){
                         $block_name = get_class($this);
-                        wp_enqueue_style( "$block_name-css", get_template_directory_uri() . "/src/Blocks/$block_name/_$block_name.css", false, '1' );
-                        wp_enqueue_script( "$block_name-js", get_template_directory_uri() . "/src/Blocks/$block_name/$block_name.js", [], '', true );
+                        wp_enqueue_style( "$block_name-css", get_template_directory_uri() . "/build/Block-$block_name.css", true, '1' );
+                        wp_enqueue_script( "$block_name-js", get_template_directory_uri() . "/build/Block-$block_name.js", [], '1', 'true' );
                     },
                     //'supports'
                     'render_callback' => [$this, 'render']
             ]);
         }
-
-
-            
     }
 
-    public function render() { 
-        
+    public function render() {
+
         $acf = get_fields();
         $title = $acf['title'] ?? false;
 
@@ -51,6 +52,6 @@
             </div>
         </section>
 
-    <?php 
+    <?php
     }
  }

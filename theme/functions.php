@@ -49,3 +49,12 @@ foreach ($blocks as $block) {
     require_once "src/Blocks/$block/$block.php";
     new $block();
 }
+$components = [
+    'Header',
+    'Footer',
+];
+
+foreach ($components as $component) {
+    require_once "src/Components/$component/$component.php";
+    new $component();
+}
