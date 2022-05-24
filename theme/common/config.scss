@@ -3,8 +3,36 @@ $SCALE_MAX_WIDTH: 1920px;
 
 $FONT_DEFAULT: 'Roboto', sans-serif;
 
-//bootstrap
 
+// BOOTSTRAP CONFIG
+@import "styles/bootstrap-custom/functions";
+@import "styles/bootstrap-custom/variables";
+@import "styles/bootstrap-custom/mixins";
+@import "styles/bootstrap-custom/utilities";
+
+// THEME
 @import "styles/colors";
 @import "styles/mixins";
 @import "styles/typography";
+
+
+// BOOTSTRAP GRID
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1280px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+);
+
+$grid-columns: 12;
+
+// BOOTSTRAP GUTTER
+$grid-gutter-width: 32px !default;

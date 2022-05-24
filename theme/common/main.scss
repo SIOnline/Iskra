@@ -1,4 +1,41 @@
-// Import bootstrap modules
+// Layout & components
+@import "styles/bootstrap-custom/root";
+@import "styles/bootstrap-custom/reboot";
+//@import "styles/bootstrap-custom/type";
+//@import "styles/bootstrap-custom/images";
+@import "styles/bootstrap-custom/containers";
+@import "styles/bootstrap-custom/grid";
+//@import "styles/bootstrap-custom/tables";
+//@import "styles/bootstrap-custom/forms";
+//@import "styles/bootstrap-custom/buttons";
+@import "styles/bootstrap-custom/transitions";
+@import "styles/bootstrap-custom/dropdown";
+//@import "styles/bootstrap-custom/button-group";
+@import "styles/bootstrap-custom/nav";
+@import "styles/bootstrap-custom/navbar";
+//@import "styles/bootstrap-custom/card";
+//@import "styles/bootstrap-custom/accordion";
+//@import "styles/bootstrap-custom/breadcrumb";
+//@import "styles/bootstrap-custom/pagination";
+//@import "styles/bootstrap-custom/badge";
+//@import "styles/bootstrap-custom/alert";
+//@import "styles/bootstrap-custom/progress";
+//@import "styles/bootstrap-custom/list-group";
+//@import "styles/bootstrap-custom/close";
+//@import "styles/bootstrap-custom/toasts";
+//@import "styles/bootstrap-custom/modal";
+//@import "styles/bootstrap-custom/tooltip";
+//@import "styles/bootstrap-custom/popover";
+//@import "styles/bootstrap-custom/carousel";
+//@import "styles/bootstrap-custom/spinners";
+
+// Helpers
+@import "styles/bootstrap-custom/helpers";
+
+// Utilities
+@import "styles/bootstrap-custom/utilities/api";
+
+
 
 // Include global theme styles
 @import "styles/fonts";
