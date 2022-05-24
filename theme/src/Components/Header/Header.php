@@ -14,6 +14,7 @@
 			<div class="container">
 
 				<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+					Company
 					<?php
 					//the_img( 'logo.png', get_bloginfo('name') )
 					//the_svg( 'logo.svg' )
