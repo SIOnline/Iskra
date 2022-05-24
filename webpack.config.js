@@ -29,18 +29,21 @@ glob.sync('theme/src/Blocks/**/*.js*').forEach(function (filePath) {
     var extension = path.extname(filePath);
     var file = path.basename(filePath, extension);
     var fileRelativePath = paths.appBlocks + '/' + file + '/' + file;
-    items['Block-' + file] = [fileRelativePath + '.js'];
-    items['Block-' + file] = [fileRelativePath + '.scss'];
+    items['Block-' + file] = [
+		fileRelativePath + '.js',
+		fileRelativePath + '.scss'
+	];
 });
 
 glob.sync('theme/src/Components/**/*.js*').forEach(function (filePath) {
     var extension = path.extname(filePath);
     var file = path.basename(filePath, extension);
     var fileRelativePath = paths.appComponents + '/' + file + '/' + file;
-    items['Component-' + file] = [fileRelativePath + '.js'];
-    items['Component-' + file] = [fileRelativePath + '.scss'];
+    items['Component-' + file] = [
+		fileRelativePath + '.js',
+		fileRelativePath + '.scss'
+	];
 });
-
 
 module.exports = {
     entry: items,
