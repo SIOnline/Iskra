@@ -1,11 +1,38 @@
 .HeroHome {
-	font-size: 40px;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-position: center center;
+	background-size: cover;
+
+	&__title {
+		@include text-68;
+		line-height: 1.05;
+	}
 
 	&__description {
-		font-size: 24px;
+		@include text-24;
+		line-height: 1.5;
+
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__certificates {
-		margin-top: 50px;
+		margin-top: 30px;
+
+		img {
+			max-width: 175px;
+			max-height: 92px;
+			width: auto;
+			height: auto;
+			margin-bottom: $grid-gutter-width;
+		}
 	}
 }

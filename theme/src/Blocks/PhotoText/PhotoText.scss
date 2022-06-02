@@ -1,13 +1,22 @@
 .PhotoText {
-	font-size: 40px;
 
 	&__subtitle {
-		color: orange;
+		@include text-16;
+		color: $burtn-orange;
 		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: .07125em;
+		margin-bottom: 1.875em;
+	}
+
+	&__title {
+		@include text-36;
+		font-weight: 600;
+		line-height: 1.25;
 	}
 
 	&__description {
-		font-size: 24px;
+		letter-spacing: .07125em;
 	}
 
 	&__certificates {

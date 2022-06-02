@@ -1,0 +1,87 @@
+.Cards {
+	.container {
+		max-width: 980px;
+	}
+	&__subtitle {
+		@include text-16;
+		color: $burtn-orange;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: .07125em;
+		margin-bottom: 1.875em;
+		@include fluid(margin-top, 25px, 52px);
+	}
+
+	&__title {
+		@include text-36;
+		font-weight: 600;
+		line-height: 1.25;
+		padding-right: 1em;
+	}
+
+	&__description {
+		letter-spacing: .07125em;
+	}
+
+	&__certificates {
+		margin-top: 50px;
+	}
+
+	&__box {
+		position: relative;
+		z-index: 10;
+		display: block;
+		padding-bottom: 120%;
+		margin-bottom: $grid-gutter-width * 2;
+
+		text-decoration: none;
+		color: $color-white;
+
+		.content {
+			@include fluid(padding, 25px, 52px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:rgba($color-black, .2);
+			transition: background-color .2s;
+
+			&__number {
+				@include text-24;
+				font-weight: 600;
+				letter-spacing: .1em;
+			}
+
+			&__label {
+				@include text-24;
+				font-weight: 600;
+				line-height: 1.3333;
+				letter-spacing: .1em;
+			}
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+
+
+		&:hover,
+		&:focus {
+			color: $color-white;
+
+			.content {
+				background: rgba($color-black, .4);
+			}
+		}
+	}
+
+}

@@ -35,6 +35,7 @@
         $acf = get_fields();
 
 		$bg_color = $acf['background_color'] ?? false;
+		$bg_img = $acf['background_image']['sizes']['hd'] ?? false;
 		$text_color = $acf['text_color'] ?? false;
 		$padding_top = $acf['padding_top'] ?? false;
 		$padding_bottom = $acf['padding_bottom'] ?? false;
@@ -49,51 +50,60 @@
 		];
 
 
-        $title = $acf['title'] ?? false;
+        $title = $acf['heading']['title'] ?? false;
         $description = $acf['description'] ?? false;
         $certificates = $acf['certificates'] ?? false;
 
         ?>
 
-        <section class="HeroHome <?= implode( ' ', $classes); ?>">
+        <section class="HeroHome <?= implode( ' ', $classes); ?>" style="background-image: url('<?= $bg_img ?>'); ">
             <div class="container">
 
-				<?php if ($title): ?>
-					<h1>
-						<?php echo $title; ?>
-					</h1>
-				<?php endif; ?>
+				<div class="inner">
 
-				<div class="row">
-					<div class="col-1">
+					<?php if ($title): ?>
 
-					</div>
-					<div class="col-6">
-						<?php if ($description): ?>
-							<div class="HeroHome__description">
-								<?= $description ?>
-							</div>
-						<?php endif; ?>
-					</div>
-				</div>
-
-				<?php if ($certificates): ?>
-				<div class="row HeroHome__certificates">
-					<div class="col-1">
-
-					</div>
-					<div class="col-6">
 						<div class="row">
-							<?php foreach ($certificates as $cert): ?>
-								<div class="col-auto">
-									<img src="<?= $cert['image']['sizes']['medium'] ?>" style="height: 50px" />
+							<div class="col-lg-6">
+								<h1 class="HeroHome__title">
+									<?php echo $title; ?>
+								</h1>
+							</div>
+						</div>
+
+					<?php endif; ?>
+
+					<div class="row">
+						<div class="col-lg-1">
+
+						</div>
+						<div class="col-lg-6">
+							<?php if ($description): ?>
+								<div class="HeroHome__description">
+									<?= $description ?>
 								</div>
-							<?php endforeach; ?>
+							<?php endif; ?>
 						</div>
 					</div>
-				</div>
-				<?php endif; ?>
 
+					<?php if ($certificates): ?>
+					<div class="row HeroHome__certificates">
+						<div class="col-lg-1">
+
+						</div>
+						<div class="col-lg-6">
+							<div class="row">
+								<?php foreach ($certificates as $cert): ?>
+									<div class="col-auto">
+										<img src="<?= $cert['image']['sizes']['medium'] ?>"/>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						</div>
+					</div>
+					<?php endif; ?>
+
+            	</div>
             </div>
         </section>
 

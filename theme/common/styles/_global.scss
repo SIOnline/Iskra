@@ -10,8 +10,10 @@ html {
 
 body {
 	@include text-16;
-	font-family: $FONT_DEFAULT;
+	font-family: $font-family-default;
 	color: $color-typography-default;
+	line-height: 2;
+
 
 	&.logged-in {
 		.navbar {
@@ -43,15 +45,15 @@ img {
 }
 
 .container {
-	width: 100%;
-	max-width: 1200px;
+	width: 86%;
+	max-width: 1320px;
 }
 
 .bg {
     &--black {background-color: #000000}
     &--orange {background-color: #F43F08}
     &--white {background-color: #FFFFFF}
-    &--gray {background-color: #E0E0E0}
+    &--gray {background-color: #F7F7F7}
     &--violet {background-color: #4646CC}
     &--light_violet {background-color: #9292FF}
 }
@@ -89,4 +91,32 @@ img {
 			max-width: 100%;
 		}
 	}
+}
+
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+
+	&:hover {
+	  color: $link-hover-color;
+	  text-decoration: $link-hover-decoration;
+	}
+  }
+
+a:not([href]):not([class]) {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+p {
+	line-height: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin-top: 0;
+	font-family: $font-family-title;
 }

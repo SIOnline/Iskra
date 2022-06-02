@@ -3,10 +3,10 @@
     "title": "[Block] HeroHome",
     "fields": [
         {
-            "key": "field_628d35cf625a5",
-            "label": "Title",
-            "name": "title",
-            "type": "textarea",
+            "key": "field_62986a48d467a",
+            "label": "Heading",
+            "name": "heading",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 2,
-            "new_lines": "br"
+            "clone": [
+                "group_62986a1356c64"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_628d35de625a6",
@@ -120,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653466883
+    "modified": 1654155869
 }

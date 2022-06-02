@@ -69,6 +69,7 @@ $blocks = [
 	'Example',
 	'HeroHome',
 	'PhotoText',
+	'Cards',
 ];
 
 foreach ($blocks as $block) {

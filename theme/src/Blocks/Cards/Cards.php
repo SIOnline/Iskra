@@ -1,6 +1,6 @@
 <?php
 
- class PhotoText {
+ class Cards {
 
     public function __construct() {
         if ( function_exists('acf_register_block_type') ) {
@@ -49,46 +49,67 @@
 		];
 
 
-        $subtitle = $acf['subtitle'] ?? false;
+        $intro = $acf['intro'] ?? false;
         $title = $acf['title'] ?? false;
-        $description = $acf['description'] ?? false;
-		$image = $acf['image']['ID'] ?? false;
-        $certificates = $acf['certificates'] ?? false;
+        $cards = $acf['cards'] ?? false;
 
 
         ?>
 
-        <section class="PhotoText <?= implode( ' ', $classes); ?>">
+        <section class="Cards <?= implode( ' ', $classes); ?>">
             <div class="container">
 
-				<div class="row justify-content-between align-items-center">
+				<div class="row">
 
-					<?php if ($image): ?>
-						<div class="col-7">
-							<?php echo wp_get_attachment_image($image, 'large', false, ['class' => 'globe-1', 'loading' => 'eager']); ?>
-						</div>
-					<?php endif; ?>
+					<div class="col-12 col-md-6 col-lg-4">
 
-					<div class="col-4">
+						<InnerBlocks />
 
-						<?php if ($subtitle): ?>
-							<p class="PhotoText__subtitle">
-								<?php echo $subtitle; ?>
+						<?php if ($intro): ?>
+							<p class="Cards__subtitle">
+								<?php echo $intro; ?>
 							</p>
 						<?php endif; ?>
 
 						<?php if ($title): ?>
-							<h2 class="PhotoText__title">
+							<h2 class="Cards__title">
 								<?php echo $title; ?>
 							</h2>
 						<?php endif; ?>
 
-						<?php if ($description): ?>
-							<div class="PhotoText__description">
-								<?= $description ?>
-							</div>
-						<?php endif; ?>
 					</div>
+
+					<?php if ($cards): ?>
+						<?php foreach ($cards as $card):
+							$number = $card['number'] ?? false;
+							$label = $card['label'] ?? false;
+							$photo = $card['photo']['ID'] ?? false;
+							?>
+							<div class="col-12 col-md-6 col-lg-4">
+								<a href="#" class="Cards__box">
+									<div class="content">
+										<?php if ($number): ?>
+											<p class="content__number">
+												<?= $number ?>
+											</p>
+										<?php endif; ?>
+
+										<?php if ($label): ?>
+											<p class="content__label">
+												<?= $label ?>
+											</p>
+										<?php endif; ?>
+
+										<?php if ($photo): ?>
+											<?php echo wp_get_attachment_image($photo, 'medium' ); ?>
+										<?php endif; ?>
+									</div>
+								</a>
+							</div>
+						<?php endforeach; ?>
+					<?php endif; ?>
+
+
 				</div>
 
             </div>

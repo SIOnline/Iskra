@@ -1,28 +1,12 @@
 @mixin text-16 {
-	@include fluid(font-size, 10px, 16px);
+	font-size: 16px;
 }
 @mixin text-24 {
-	@include fluid(font-size, 10px, 16px);
+	@include fluid(font-size, 20px, 24px);
 }
-
-a {
-	color: $link-color;
-	text-decoration: $link-decoration;
-
-	&:hover {
-	  color: $link-hover-color;
-	  text-decoration: $link-hover-decoration;
-	}
-  }
-
-a:not([href]):not([class]) {
-  &,
-  &:hover {
-    color: inherit;
-    text-decoration: none;
-  }
+@mixin text-36 {
+	@include fluid(font-size, 28px, 36px);
 }
-
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin-top: 0;
+@mixin text-68 {
+	@include fluid(font-size, 30px, 68px);
 }

@@ -41,7 +41,7 @@
                 "black": "<div style=\"background-color: #000000\"><\/div>",
                 "orange": "<div style=\"background-color: #F43F08\"><\/div>",
                 "white": "<div style=\"background-color: #FFFFFF\"><\/div>",
-                "gray": "<div style=\"background-color: #E0E0E0\"><\/div>",
+                "gray": "<div style=\"background-color: #F7F7F7\"><\/div>",
                 "violet": "<div style=\"background-color: #4646CC\"><\/div>",
                 "light_violet": "<div style=\"background-color: #9292FF\"><\/div>"
             },
@@ -49,6 +49,30 @@
             "default_value": "white",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_62986fb13f163",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_628d3ae2f525e",
@@ -143,5 +167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653467533
+    "modified": 1654160981
 }
