@@ -41,3 +41,52 @@ img {
 ::-webkit-scrollbar-thumb {
 	background: $color-black;
 }
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+}
+
+.bg {
+    &--black {background-color: #000000}
+    &--orange {background-color: #F43F08}
+    &--white {background-color: #FFFFFF}
+    &--gray {background-color: #E0E0E0}
+    &--violet {background-color: #4646CC}
+    &--light_violet {background-color: #9292FF}
+}
+
+.text {
+    &--black {color: #000000}
+    &--white {color: #FFFFFF}
+}
+
+.padding-top {
+	&--0 {padding-top:0;}
+	&--1 {padding-top:30px;}
+	&--2 {padding-top:60px;}
+	&--3 {padding-top:90px;}
+	&--4 {padding-top:120px;}
+	&--5 {padding-top:150px;}
+}
+
+.padding-bottom {
+	&--0 {padding-bottom:0;}
+	&--1 {padding-bottom:30px;}
+	&--2 {padding-bottom:60px;}
+	&--3 {padding-bottom:90px;}
+	&--4 {padding-bottom:120px;}
+	&--5 {padding-bottom:150px;}
+}
+
+
+.container {
+	&--default {
+
+	}
+	&--full {
+		.container {
+			max-width: 100%;
+		}
+	}
+}

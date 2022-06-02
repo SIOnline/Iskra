@@ -1,0 +1,16 @@
+.PhotoText {
+	font-size: 40px;
+
+	&__subtitle {
+		color: orange;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		font-size: 24px;
+	}
+
+	&__certificates {
+		margin-top: 50px;
+	}
+}

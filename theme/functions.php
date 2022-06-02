@@ -20,6 +20,9 @@ $settings = 'settings/';
 	require $path . $settings . 'media_sanitize_names.php';
 	require $path . $settings . 'theme_setup.php';
 
+$plugin_helpers = 'plugin_helpers/';
+	require $path . $plugin_helpers . 'acf.php';
+
 
 /**
  * Gutenberg Include styles
@@ -64,6 +67,8 @@ add_filter( 'block_categories_all', 'filter_block_categories_when_post_provided'
  */
 $blocks = [
 	'Example',
+	'HeroHome',
+	'PhotoText',
 ];
 
 foreach ($blocks as $block) {

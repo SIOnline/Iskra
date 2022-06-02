@@ -1,3 +1,5 @@
+@import "main";
+
 .wp-block.editor-post-title__input {
     text-align: center;
     padding: 20px;
@@ -12,4 +14,8 @@ html :where(.wp-block) {
 
 .wp-block {
     margin: 0;
+}
+
+.editor-styles-wrapper .row {
+    margin-top: inherit;
 }

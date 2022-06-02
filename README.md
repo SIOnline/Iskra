@@ -29,3 +29,8 @@ WordPress starter theme
 | <http://localhost:4002>             | PhpMyAdmin                  |
 | <>                                  | Staging                     |
 | <>                                  | Production                  |
+
+
+
+## TO DO
+WORDPRESS_TABLE_PREFIX: _wp to WORDPRESS_TABLE_PREFIX: wp_
